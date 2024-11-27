@@ -139,12 +139,12 @@ st.markdown("<h2 style='text-align: center;'>Explicación de un tema de las clas
 # unsafe_allow_html=True: Este es un argumento opcional en la función markdown.
 
 # Agregamos un video a la aplicación web ( menor a 20 MB)
-st.video("Diferencias entre las declaraciones condicionales if-elif-else_ANGELA CHIROQUE .mp4")
+
 # st.video("ppc-2024-1.mp4"): Esta línea está agregando un video a la aplicación web.
 
 
 # Agregamos un enlace a la página web donde está el video.
-enlace = f'<a href="https://drive.google.com/file/d/1Cm-AwULrQqt4gCUyZ9Mo_NXPm5SMG31S/view?usp=sharing" target="_blank"><button>Nombre creativo para el botón</button></a>'
+enlace = f'<a href="https://drive.google.com/file/d/1Cm-AwULrQqt4gCUyZ9Mo_NXPm5SMG31S/view?usp=sharing" target="_blank"><button>Diferencias entre las declaraciones condicionales if-elif-else</button></a>'
 st.markdown(enlace, unsafe_allow_html=True)
 # f'<a href="URL" target="_blank"><button>Nombre</button></a>':
 # La etiqueta <a> se utiliza para crear un enlace en HTML.
@@ -156,7 +156,7 @@ st.markdown(enlace, unsafe_allow_html=True)
 
 
 # Agregamos un subtítulo en la barra lateral
-sidebar.markdown("<h1 style='text-align: center;'>Aquí escribe un nombre creativo para presentar tus gráficos</h1>", unsafe_allow_html=True)
+sidebar.markdown("<h1 style='text-align: center;'>Gráficos creados durante el ciclo</h1>", unsafe_allow_html=True)
 
 # <h1 style='text-align: center;'>Los análisis de Ellie</h1>: Esta es una cadena de código HTML.
 # La etiqueta <h1> se utiliza para el encabezado principal de una página web.
@@ -164,7 +164,7 @@ sidebar.markdown("<h1 style='text-align: center;'>Aquí escribe un nombre creati
 # El texto dentro de las etiquetas <h1> ("Los análisis de Ellie") es el contenido del encabezado.
 
 # Creamos una lista de gráficos
-graficos = ['Lenguas aisladas', 'Familias lingüísticas', 'Mapa de las lenguas sudamericanas']
+graficos = ['Gráfico 1 - Juventus Local', 'Gráfico 2 - Juventus visitante', 'Gráfico 3 - Milan e Inter']
 
 # Creamos un cuadro de selección en la barra lateral
 grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
@@ -177,17 +177,17 @@ grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
 # La función selectbox se utiliza para crear un cuadro de selección en la barra lateral.
 
 # Mostramos el gráfico seleccionado
-if grafico_seleccionado == 'Lenguas aisladas':
+if grafico_seleccionado == 'Gráfico 1 - Juventus Local':
     sidebar.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
-    sidebar.image("aisladas_base_datos.png", caption='Lenguas aisladas', width=500)
+    sidebar.image("grafico 1 juventus local.png", caption='El gráfico es un histograma que representa la frecuencia de goles anotados por la Juventus como local en distintos partidos. Eje horizontal (Goles): Indica la cantidad de goles anotados en un partido (desde 0 hasta 8). Eje vertical (# de partidos): Muestra la cantidad de partidos en los que se anotó esa cantidad de goles. Distribución de los goles: La frecuencia más alta está en la categoría de 2 goles, lo que sugiere que este es el número más común de goles que la Juventus anota como local. Hay un patrón de distribución casi simétrica: las frecuencias disminuyen gradualmente a medida que los goles anotados son más bajos (0, 1) o más altos (4). Rendimiento ofensivo en casa:La Juventus anota con mayor regularidad entre 1 y 3 goles en casa.Es poco frecuente que marque 0 goles (aunque esto ocurre), y los partidos con más de 4 goles son excepcionales.Comparación visual:A diferencia de los goles como visitante (donde había una fuerte asimetría hacia pocos goles), el rendimiento en casa parece más balanceado, con un desempeño ligeramente mejor al anotar frecuentemente 2 o 3 goles.', width=500)
     pass
-elif grafico_seleccionado == 'Familias lingüísticas':
+elif grafico_seleccionado == 'Gráfico 2 - Juventus visitante':
     sidebar.markdown("<div style='text-align: justify'>Texto para la opción 2.</div>", unsafe_allow_html=True)
-    sidebar.image("lengua_familia_GB.png", caption='Familias lingüísticas', width=500)
+    sidebar.image("grafico 2 juventus visitante.png", caption='El gráfico es un histograma que muestra la frecuencia de goles anotados por la Juventus como visitante en diferentes partidos. Eje horizontal (Goles): Representa la cantidad de goles anotados en un partido (desde 0 hasta 8). Eje vertical (# de partidos): Indica el número de partidos en los que la Juventus anotó una cantidad específica de goles. Distribución de los goles: La mayor parte de los partidos como visitante terminan con 1 o 2 goles anotados, ya que el grupo más alto (frecuencia máxima) está en la categoría de 2 goles. Hay pocos partidos donde la Juventus no anota goles (frecuencia más baja, aunque todavía significativa). Rendimiento extremo: Es poco común que la Juventus anote más de 3 goles como visitante, ya que las frecuencias disminuyen notablemente a partir de 3 goles. Asimetría:La distribución está sesgada a la derecha: la mayoría de los partidos tienen un número bajo de goles, mientras que los partidos con un número alto de goles (como 4 o más) son raros.', width=500)
     pass
-elif grafico_seleccionado == 'Mapa de las lenguas sudamericanas':
+elif grafico_seleccionado == 'Gráfico 3 - Milan e Inter':
     sidebar.markdown("<div style='text-align: justify'>Texto para la opción 3.</div>", unsafe_allow_html=True)
-    sidebar.image("mapa_familias_aisladas_S.jpg", caption='Mapa de las lenguas sudamericanas', width=500)
+    sidebar.image("pie chart visitante milan inter.png", caption='El gráfico es un diagrama de pastel que muestra la distribución porcentual del promedio de goles como visitante entre dos equipos: Inter y Milan. Inter (59.6%): Representa la mayoría de los goles promedio anotados como visitante en comparación con el Milan. Es decir, el Inter tiene un desempeño superior en términos de goles anotados fuera de casa en esta comparación específica. Milan (40.4%): Aunque es menor, sigue siendo una proporción significativa, indicando que el Milan también tiene una contribución importante a los goles promedio como visitante, pero es inferior en comparación con el Inter.', width=500)
     pass
 
 # if grafico_seleccionado == 'Gráfico de Macroareas': Esta línea verifica si la opción seleccionada es 'Gráfico de Macroareas'.
